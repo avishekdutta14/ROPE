@@ -2,7 +2,9 @@
 
 This tools helps in classifying paprica designated edges, and unique sequences (16S and 18S) using RDP classifier.
 
-Details of paprica pipeline can be found in https://github.com/bowmanjeffs/paprica, and the tutorial can be found in https://www.polarmicrobes.org/analysis-with-paprica/
+Details of paprica pipeline can be found in https://github.com/bowmanjeffs/paprica, and the tutorial can be found in https://www.polarmicrobes.org/analysis-with-paprica/.
+
+This works with the latest version of paprica (Jan-2021).
 
 Most of the python based dependencies are same as paprica. So, if you are running paprica you do not need install them separately. Most important dependencies for ROPE is RDPTool. You can get the RDP tool from https://github.com/rdpstaff/RDPTools. The RDP tool needs a java library (ant 1.9). You can find the library from https://ant.apache.org/bindownload.cgi
 
@@ -56,11 +58,11 @@ It finds the most abundant sequence affiliated to a particular edge and makes a 
 
 ### RDP classification of 16S unique
 
-It finds the most abundant sequence affiliated to a particular edge and makes a .fasta file. The fasta file is classified using RDP calssifier.  The output file will contain the taxonomy of each edges best on the most abundant affiliated asv in a file name *taxa_map_rdp_unique.csv*. The numerical values generated at each taxonomic hierarchy is the confidence of classification at that level. In this script, unique ID will be generated for each unique sequence and the map file for each sequences (mapping to unique ID) will be present in *unique_ID_tally.csv*
+It extracts the sequences from the unique tally.csv file and makes a .fasta file. The fasta file is classified using RDP calssifier.  The output file will contain the taxonomy of each edges best on the most abundant affiliated asv in a file name *taxa_map_rdp_unique.csv*. The numerical values generated at each taxonomic hierarchy is the confidence of classification at that level. In this script, unique ID will be generated for each unique sequence and the map file for each sequences (mapping to unique ID) will be present in *unique_ID_tally.csv*
 
 ### RDP classification of 18S unqiue
 
-It finds the most abundant sequence affiliated to a particular edge and makes a .fasta file. The fasta file is classified using RDP calssifier.  The output file will contain the taxonomy of each edges best on the most abundant affiliated asv in a file name *taxa_map_ROPE_unique_18S.csv*. The numerical values generated at each taxonomic hierarchy is the confidence of classification at that level.In this script, unique ID will be generated for each unique sequence and the map file for each sequences (mapping to unique ID) will be present in *unique_ID_tally.csv*
+It extracts the sequences from the unique_tally.csv file and makes a .fasta file. The fasta file is classified using RDP calssifier.  The output file will contain the taxonomy of each edges best on the most abundant affiliated asv in a file name *taxa_map_ROPE_unique_18S.csv*. The numerical values generated at each taxonomic hierarchy is the confidence of classification at that level. In this script, unique ID will be generated for each unique sequence and the map file for each sequences (mapping to unique ID) will be present in *unique_ID_tally.csv*
 
 ## How to cite
 For paprica (for all analyses):
