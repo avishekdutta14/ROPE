@@ -14,7 +14,7 @@ awk -F , '{print ">"$3"\n"$2}' rep_seq.csv > rep_seq.fasta
 
 awk 'NR > 2 { print }' <rep_seq.fasta >rep_seq_input.fasta
 
-##rdp classification
+##rdp classification-please specify the PATH for classifier
 
 java -Xmx1g -jar ~/rdp_tools/RDPTools/classifier.jar classify -f allrank -o output.txt rep_seq_input.fasta 
 
