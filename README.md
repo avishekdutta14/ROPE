@@ -21,7 +21,10 @@ chmod a+x *sh
 git clone https://github.com/rdpstaff/RDPTools.git
 ```
 For RDP installations, building depends on 'make' and [ant1.8](https://ant.apache.org/bindownload.cgi). 
-**Important consideration:** Please specify the PATH of the RDP Tools in **rdp classification** step in all the shell script after ``` -jar ```
+
+## Important consideration:
+
+Please specify the PATH of the *RDP Tools/classifier.jar* in **rdp classification** step in all the shell script after ``` -jar ```
 
 ## Scripts
 ### For running ROPE on edges
