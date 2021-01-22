@@ -40,11 +40,24 @@ For 18S sequencing download the latest version of 18S classifier (file name: 18S
 ```
 unzip 18Sv4.1_mydata_trained.zip
 ```
-Be sure to declare/modify the path for 18Sv4.1_mydata_trained.zip in the *rdp classification* step in the 18S shell script after ``` -t ``` 
+Be sure to declare/modify the path for 18Sv4.1_mydata_trained.zip in the *rdp classification* step in the 18S shell script after ``` -t ```. 
 For running ROPE on the 16S edges, you will need to copy the 18S .unique_tally.csv (output of paprica-combine_results.py) file in a new folder and run the following script
 ```
 ./ROPE_unique_18S.sh 
 ```
+## How it works
+
+###RDP classification of edges
+It finds the most abundant sequence affiliated to a particular edge and makes a .fasta file. The fasta file is classified using RDP calssifier.  The output file will contain the taxonomy of each edges best on the most abundant affiliated asv in a file name *taxa_map_ROPE.csv*. The numerical values generated at each taxonomic hierarchy is the confidence of classification at that level.
+
+###RDP classification of 16S unique
+
+It finds the most abundant sequence affiliated to a particular edge and makes a .fasta file. The fasta file is classified using RDP calssifier.  The output file will contain the taxonomy of each edges best on the most abundant affiliated asv in a file name *taxa_map_rdp_unique.csv*. The numerical values generated at each taxonomic hierarchy is the confidence of classification at that level. In this script, unique ID will be generated for each unique sequence and the map file for each sequences (mapping to unique ID) will be present in *unique_ID_tally.csv*
+
+###RDP classification of 18S unqiue
+
+It finds the most abundant sequence affiliated to a particular edge and makes a .fasta file. The fasta file is classified using RDP calssifier.  The output file will contain the taxonomy of each edges best on the most abundant affiliated asv in a file name *taxa_map_ROPE_unique_18S.csv*. The numerical values generated at each taxonomic hierarchy is the confidence of classification at that level.In this script, unique ID will be generated for each unique sequence and the map file for each sequences (mapping to unique ID) will be present in *unique_ID_tally.csv*
+
 ## How to cite
 For paprica (for all analyses):
 Bowman, Jeff S., and Hugh W. Ducklow. "Microbial Communities Can Be Described by Metabolic Structure: A General Framework and Application to a Seasonally Variable, Depth-Stratified Microbial Community from the Coastal West Antarctic Peninsula." PloS one 10.8 (2015): e0135868.
