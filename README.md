@@ -54,7 +54,7 @@ For running ROPE on the 16S edges, you will need to copy the 18S .unique_tally.c
 ## How it works
 
 ### RDP classification of edges
-It finds the most abundant sequence affiliated to a particular edge and makes a .fasta file. The fasta file is classified using RDP calssifier.  The output file will contain the taxonomy of each edges best on the most abundant affiliated asv in a file name *taxa_map_ROPE.csv*. The numerical values generated at each taxonomic hierarchy is the confidence of classification at that level.
+It finds the most abundant sequence affiliated to a particular edge and makes a .fasta file. The fasta file is classified using RDP calssifier.  The output file will contain the taxonomy of each edges best on the most abundant affiliated asv in a file name *taxa_map_ROPE.csv*. The numerical values generated at each taxonomic hierarchy is the confidence of classification at that level. Details about classification algorithm and confidence calculation is present in [Classifier help] (http://rdp.cme.msu.edu/classifier/class_help.jsp).
 
 ### RDP classification of 16S unique
 
