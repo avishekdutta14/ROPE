@@ -10,7 +10,7 @@ awk -F , '{print ">"$1"\n"$2}' unique_ID_tally.csv > rep_seq.fasta
 
 awk 'NR > 2 { print }' <rep_seq.fasta >unique_seq_input.fasta
 
-##rdp classification
+##rdp classification-please specify the PATH for rdp classifier and 18S_dataset
 
 java -Xmx1g -jar ~/rdp_tools/RDPTools/classifier.jar classify -t ~/ROPE_18S/18S_database/18Sv4.1_mydata_trained/rRNAClassifier.properties -f allrank -o output.txt unique_seq_input.fasta 
 
