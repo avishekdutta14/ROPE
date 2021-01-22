@@ -47,14 +47,14 @@ For running ROPE on the 16S edges, you will need to copy the 18S .unique_tally.c
 ```
 ## How it works
 
-###RDP classification of edges
+### RDP classification of edges
 It finds the most abundant sequence affiliated to a particular edge and makes a .fasta file. The fasta file is classified using RDP calssifier.  The output file will contain the taxonomy of each edges best on the most abundant affiliated asv in a file name *taxa_map_ROPE.csv*. The numerical values generated at each taxonomic hierarchy is the confidence of classification at that level.
 
-###RDP classification of 16S unique
+### RDP classification of 16S unique
 
 It finds the most abundant sequence affiliated to a particular edge and makes a .fasta file. The fasta file is classified using RDP calssifier.  The output file will contain the taxonomy of each edges best on the most abundant affiliated asv in a file name *taxa_map_rdp_unique.csv*. The numerical values generated at each taxonomic hierarchy is the confidence of classification at that level. In this script, unique ID will be generated for each unique sequence and the map file for each sequences (mapping to unique ID) will be present in *unique_ID_tally.csv*
 
-###RDP classification of 18S unqiue
+### RDP classification of 18S unqiue
 
 It finds the most abundant sequence affiliated to a particular edge and makes a .fasta file. The fasta file is classified using RDP calssifier.  The output file will contain the taxonomy of each edges best on the most abundant affiliated asv in a file name *taxa_map_ROPE_unique_18S.csv*. The numerical values generated at each taxonomic hierarchy is the confidence of classification at that level.In this script, unique ID will be generated for each unique sequence and the map file for each sequences (mapping to unique ID) will be present in *unique_ID_tally.csv*
 
