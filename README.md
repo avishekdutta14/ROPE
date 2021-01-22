@@ -21,26 +21,27 @@ chmod a+x *sh
 git clone https://github.com/rdpstaff/RDPTools.git
 ```
 For RDP installations, building depends on 'make' and [ant1.8](https://ant.apache.org/bindownload.cgi). 
+**Important consideration:** Please specify the PATH of the RDP Tools in **rdp classification** step in all the shell script after ``` -jar ```
 
 ## Scripts
 ### For running ROPE on edges
-
+For running ROPE on the edges, you will need to copy all the .unique_seqs.csv (output of paprica-run.sh)file in a new folder and run the following script
 ```
 ./ROPE.sh 
 ```
 ### For running ROPE on 16S unique
-
+For running ROPE on the 16S edges, you will need to copy the 16S .unique_tally.csv (output of paprica-combine_results.py) file in a new folder and run the following script
 ```
 ./ROPE_unique.sh
 ```
 
 ### For running ROPE on 18S unique
 For 18S sequencing download the latest version of 18S classifier (file name: 18Sv4.1_mydata_trained.zip for version 4.1) from https://github.com/terrimporter/18SClassifier/releases
-
 ```
 unzip 18Sv4.1_mydata_trained.zip
 ```
-Be sure to declare/modify the path for 18Sv4.1_mydata_trained.zip in the rdp classification step in the 18S shell script 
+Be sure to declare/modify the path for 18Sv4.1_mydata_trained.zip in the *rdp classification* step in the 18S shell script after ``` -t ``` 
+For running ROPE on the 16S edges, you will need to copy the 18S .unique_tally.csv (output of paprica-combine_results.py) file in a new folder and run the following script
 ```
 ./ROPE_unique_18S.sh 
 ```
