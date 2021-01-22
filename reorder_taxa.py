@@ -112,6 +112,6 @@ df2["genus"] = df2["genusH1"] + '' + df2["genusH2"] + '' + df2["genusH3"] + '' +
 df3 = df2 [['Edge#','domain','phylum','class', 'order', 'family', 'genus', 'taxon']]
 
 
-df3.to_csv('taxa_map_rdp.csv', header=True, index=False)
+df3.to_csv('taxa_map_ROPE.csv', header=True, index=False)
 
 
