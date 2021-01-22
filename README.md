@@ -38,6 +38,7 @@ For running ROPE on the 16S edges, you will need to copy the 16S .unique_tally.c
 ### For running ROPE on 18S unique
 For 18S sequencing download the latest version of 18S classifier (file name: 18Sv4.1_mydata_trained.zip for version 4.1) from https://github.com/terrimporter/18SClassifier/releases
 ```
+wget https://github.com/terrimporter/18SClassifier/releases/download/v4.1/18Sv4.1_mydata_trained.zip
 unzip 18Sv4.1_mydata_trained.zip
 ```
 Be sure to declare/modify the path for 18Sv4.1_mydata_trained.zip in the *rdp classification* step in the 18S shell script after ``` -t ```. 
