@@ -39,12 +39,16 @@ df2 = df[['Edge#','H1', 'H2', 'H3' , 'H4', 'H5', 'H6', 'H7', 'H8']]
 
 df2['taxon'] = df['C']+'_'+df['D']+'_'+df['E'].astype(str) + ',' + df['F']+'_'+df['G']+'_'+df['H'].astype(str) + ',' + df['I']+'_'+df['J']+'_'+df['K'].astype(str) + ',' + df['L']+'_'+df['M']+'_'+df['N'].astype(str) + ',' + df['O']+'_'+df['P']+'_'+df['Q'].astype(str) + ',' + df['R']+'_'+df['S']+'_'+df['T'].astype(str) + ',' + df['U']+'_'+df['V']+'_'+df['W'].astype(str) + ',' + df['X']+'_'+df['Y']+'_'+df['Z'].astype(str)
 
+#The following loops are important since the taxonomic hierarchy are not evenly spread in the RDP out (For eg:genus may occur in the column for order)
+#to extract these, the loops are created to scan each columns created before (H1-H8; H8 is given for certain classifications where sub-order is present)
+#and copy the taxonomic hierarchy for eg family to the the family column and genus to the genus column.
+
 columns = ['H1', 'H2', 'H3' , 'H4', 'H5', 'H6', 'H7', 'H8']
 
 #for domain
 for x in columns:
 	y = 'domain'+ x
-	df2[y] = np.where(df2[x].str.contains('domain',case=False),df2[x],'')
+	df2[y] = np.where(df2[x].str.contains('domain',case=False),df2[x],'') # this will create a column with prefix domain and suffix H1-8 (x) column (described before), search for strings containing domain and replace with the same value
 	#df2[x] = np.where(df2[x].str.contains('domain',case=False),'',df2[x])
 
 df2 = df2.replace(np.nan, '', regex=True)
