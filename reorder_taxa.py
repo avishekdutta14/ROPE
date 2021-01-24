@@ -48,7 +48,14 @@ columns = ['H1', 'H2', 'H3' , 'H4', 'H5', 'H6', 'H7', 'H8']
 #for domain
 for x in columns:
 	y = 'domain'+ x
-	df2[y] = np.where(df2[x].str.contains('domain',case=False),df2[x],'') # this will create a column with prefix domain and suffix H1-8 (x) column (described before), search for strings containing domain and replace with the same value
+	# this will create a column with prefix domain and suffix H1-8 (x) column (described before), 
+	# search for strings containing domain and place it in the y column. 
+	#So if y is domainH1, it will search domain in column H1, and all the matched strings ('domain') in column H1 will be copied as it is in column domainH1
+	#if for a particular row if it does not get the string 'domain' it will leave it as blank, For eg if in column H2, if this function does not get the string 'domain',
+	#then in domainH2, that place will be blank.
+	
+	df2[y] = np.where(df2[x].str.contains('domain',case=False),df2[x],'') 
+	#when the string 'domain' matches df2[x], the value in df2[x] is copied to df2[y]; otherwise the placein df2[y] remains blank('').
 	#df2[x] = np.where(df2[x].str.contains('domain',case=False),'',df2[x])
 
 df2 = df2.replace(np.nan, '', regex=True)
