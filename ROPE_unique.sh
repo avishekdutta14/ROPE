@@ -1,5 +1,7 @@
 #!/bin/bash
 
+@author: Avishek Dutta, avdutta@ucsd.edu
+
 #merging and formatting unique sequences
 
 ./extracting_uni_seqs.py
