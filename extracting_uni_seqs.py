@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-@author: Avishek Dutta, avdutta@ucsd.edu
+__author__ = 'Avishek Dutta, avdutta@ucsd.edu' 
 
 import pandas as pd
 import os
