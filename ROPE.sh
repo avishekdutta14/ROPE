@@ -1,5 +1,7 @@
 #!/bin/bash
 
+@author: Avishek Dutta, avdutta@ucsd.edu
+
 #merging and formatting unique sequences
 
 ./merged_unique.py
