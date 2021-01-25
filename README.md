@@ -1,4 +1,4 @@
-# ROPE - RDP classification of Paprica Edges (under development -beta version)
+# ROPE - RDP classification of Paprica Edges (under development)
 
 This tools helps in classifying paprica designated edges, and unique sequences (16S and 18S) using RDP classifier.
 
