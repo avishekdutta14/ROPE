@@ -9,6 +9,8 @@ import glob
 import csv
 import numpy as np
 
+warnings.filterwarnings("ignore")
+
 path = '.'
 files_in_dir = [f for f in os.listdir(path) if f.endswith('.unique_seqs.csv')]
 for filenames in files_in_dir:
