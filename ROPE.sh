@@ -4,11 +4,11 @@
 
 #merging and formatting unique sequences
 
-./merged_unique.py
+merged_unique.py
 
 #picking representative sequences
 
-./rep_seq.py
+rep_seq.py
 
 ##making fasta file of the representative sequences
 
@@ -26,7 +26,7 @@ cat output.txt | tr "\\t" "," > output.csv
 
 ##for reordering taxonomy
 
-./reorder_taxa.py 
+reorder_taxa.py 
 
 ##removing temporary files
 
