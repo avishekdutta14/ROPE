@@ -4,7 +4,7 @@
 
 #merging and formatting unique sequences
 
-./extracting_uni_seqs.py
+extracting_uni_seqs.py
 
 ##making fasta file of the unique sequences
 
@@ -22,7 +22,7 @@ cat output.txt | tr "\\t" "," > output.csv
 
 ##for reordering taxonomy
 
-./reorder_taxa_unique_18S.py 
+reorder_taxa_unique_18S.py 
 
 
 ##removing temporary files
