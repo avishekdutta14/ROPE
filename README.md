@@ -29,6 +29,7 @@ For RDP installations, building depends on 'make' and [ant1.8](https://ant.apach
 Please specify the PATH of the *RDP Tools/classifier.jar* in **rdp classification** step in all the shell scripts (files ending with .sh) after ``` -jar ```
 
 ## Scripts
+
 ### For running ROPE on edges
 For running ROPE on the edges, you will need to copy all the .unique_seqs.csv (output of paprica-run.sh)file in a new folder and run the following script
 ```
