@@ -39,6 +39,21 @@ For running ROPE on the 16S edges, you will need to copy the 16S .unique_tally.c
 ```
 ./ROPE_unique.sh
 ```
+### For comparison of ROPE and paprica output at phylum level 
+
+As of now this script works only with 16S unique output of ROPE. The required files for this script are
+
+1. seq_edge_map.csv (output of paparica)
+2. taxon_map.csv (output of parica)
+3. taxa_map_ROPE_unique.csv (output of ROPE)
+4. unique_ID_tally.csv (output of ROPE)
+
+The output of this script is *comparison_phylum_RP.csv* file which has the unique sequences, phylum level affiliations of ROPE and paprica, ROPE confidence value at phylum level, and comparison column (match/mis-match).
+
+```
+./comparison_phylum_RP.py 
+```
+
 
 ### For running ROPE on 18S unique
 For 18S sequencing download the latest version of 18S classifier (file name: 18Sv4.1_mydata_trained.zip for version 4.1) from https://github.com/terrimporter/18SClassifier/releases
