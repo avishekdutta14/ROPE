@@ -43,8 +43,8 @@ For running ROPE on the 16S edges, you will need to copy the 16S .unique_tally.c
 
 As of now this script works only with 16S unique output of ROPE. The required files for this script are
 
-1. seq_edge_map.csv (output of paparica)
-2. taxon_map.csv (output of parica)
+1. seq_edge_map.csv (output of paprica)
+2. taxon_map.csv (output of paprica)
 3. taxa_map_ROPE_unique.csv (output of ROPE)
 4. unique_ID_tally.csv (output of ROPE)
 
