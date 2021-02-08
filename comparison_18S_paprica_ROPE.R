@@ -1,5 +1,5 @@
 #This script is to compare taxonomy between ROPE and paprica at 18S level.
-#The ouput file will contain ROPE taxonomy file on the right and paprica taxonomy file on the left
+#The ouput file will contain ROPE taxonomy file on the left and paprica taxonomy file on the right
 #author: Avishek Dutta (avdutta@ucsd.edu)
 
 #reading paprica taxon map file
