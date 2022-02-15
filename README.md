@@ -81,6 +81,10 @@ It extracts the sequences from the unique tally.csv file and makes a .fasta file
 It extracts the sequences from the unique_tally.csv file and makes a .fasta file. The fasta file is classified using RDP calssifier.  The output file will contain the taxonomy of each edges best on the most abundant affiliated asv in a file name *taxa_map_ROPE_unique_18S.csv*. The numerical values generated at each taxonomic hierarchy is the confidence of classification at that level. In this script, unique ID will be generated for each unique sequence and the map file for each sequences (mapping to unique ID) will be present in *unique_ID_tally.csv*
 
 ## How to cite
+
+For ROPE:
+Dutta, A., Goldman, T., Keating, J., Burke, E., Williamson, N., Dirmeier, R., & Bowman, J. S. (2022). Machine Learning Predicts Biogeochemistry from Microbial Community Structure in a Complex Model System. Microbiology Spectrum, 10(1), e01909-21.
+
 For paprica (for all analyses):
 Bowman, Jeff S., and Hugh W. Ducklow. "Microbial Communities Can Be Described by Metabolic Structure: A General Framework and Application to a Seasonally Variable, Depth-Stratified Microbial Community from the Coastal West Antarctic Peninsula." PloS one 10.8 (2015): e0135868.
 
