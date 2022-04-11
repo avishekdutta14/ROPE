@@ -6,7 +6,7 @@
 import pandas as pd
 import os
 
-path = '.'
+path = os.getcwd()
 files_in_dir = [f for f in os.listdir(path) if f.endswith('.unique_tally.csv')]
 for filenames in files_in_dir:
     df = pd.read_csv(filenames, index_col=0)
