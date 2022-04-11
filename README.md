@@ -55,7 +55,6 @@ The output of this script is *comparison_phylum_RP.csv* file which has the uniqu
 ./comparison_phylum_RP.py 
 ```
 
-
 ### For running ROPE on 18S unique
 For 18S sequencing download the latest version of 18S classifier (file name: 18Sv4.1_mydata_trained.zip for version 4.1) from https://github.com/terrimporter/18SClassifier/releases
 ```
@@ -67,6 +66,31 @@ For running ROPE on the 16S edges, you will need to copy the 18S .unique_tally.c
 ```
 ./ROPE_unique_18S.sh 
 ```
+
+### For comparison of ROPE and paprica output at unqiue level: Works with output of ROPE_unique.sh and ROPE_unique_18S.sh
+
+#### For 16S (comparison_paprica_ROPE.R )
+
+Required files: Change the filenames in the script accordingly
+
+1. seq_edge_map.csv (output of paprica)
+2. taxon_map.csv (output of paprica)
+3. taxa_map_ROPE_unique.csv (output of ROPE)
+4. unique_ID_tally.csv (output of ROPE)
+
+The output of this script is *ROPE_paprica_comaprison_unique_16S.csv*
+
+#### For 18S (comparison_18S_paprica_ROPE.R )
+
+Required files: Change the filenames in the script accordingly
+1. seq_edge_map.csv (output of paprica)
+2. taxon_map.csv (output of paprica)
+3. taxa_map_ROPE_unique_18S.csv (output of ROPE)
+4. unique_ID_tally.csv (output of ROPE)
+
+The output of this script is *ROPE_paprica_comaprison_18S.csv*
+
+
 ## How it works
 
 ### RDP classification of edges
