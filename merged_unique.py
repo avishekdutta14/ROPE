@@ -12,7 +12,7 @@ import warnings
 
 warnings.filterwarnings("ignore")
 
-path = '.'
+path = os.getcwd()
 files_in_dir = [f for f in os.listdir(path) if f.endswith('.unique_seqs.csv')]
 for filenames in files_in_dir:
     edge_data = pd.read_csv(filenames)
