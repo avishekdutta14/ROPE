@@ -28,17 +28,23 @@ For RDP installations, building depends on 'make' and [ant1.9](https://ant.apach
 
 Please specify the PATH of the *RDP Tools/classifier.jar* in **rdp classification** step in all the shell scripts (files ending with .sh) after ``` -jar ```
 
+Also put the ROPE scripts in the PATH environmental variable.
+
+```
+export PATH=$PATH:/path/to/ROPE
+```
+
 ## Scripts
 
 ### For running ROPE on edges
 For running ROPE on the edges, you will need to copy all the .unique_seqs.csv (output of paprica-run.sh)file in a new folder and run the following script
 ```
-./ROPE.sh 
+ROPE.sh 
 ```
 ### For running ROPE on 16S unique
 For running ROPE on the 16S edges, you will need to copy the 16S .unique_tally.csv (output of paprica-combine_results.py) file in a new folder and run the following script
 ```
-./ROPE_unique.sh
+ROPE_unique.sh
 ```
 ### For comparison of ROPE and paprica output at phylum level 
 
@@ -52,7 +58,7 @@ As of now this script works only with 16S unique output of ROPE. The required fi
 The output of this script is *comparison_phylum_RP.csv* file which has the unique sequences, phylum level affiliations of ROPE and paprica, ROPE confidence value at phylum level, and comparison column (match/mis-match).
 
 ```
-./comparison_phylum_RP.py 
+comparison_phylum_RP.py 
 ```
 
 ### For running ROPE on 18S unique
@@ -64,7 +70,7 @@ unzip 18Sv4.1_mydata_trained.zip
 Be sure to declare/modify the path for 18Sv4.1_mydata_trained.zip in the *rdp classification* step in the 18S shell script after ``` -t ```. 
 For running ROPE on the 16S edges, you will need to copy the 18S .unique_tally.csv (output of paprica-combine_results.py) file in a new folder and run the following script
 ```
-./ROPE_unique_18S.sh 
+ROPE_unique_18S.sh 
 ```
 
 ### For comparison of ROPE and paprica output at unqiue level: Works with output of ROPE_unique.sh and ROPE_unique_18S.sh
